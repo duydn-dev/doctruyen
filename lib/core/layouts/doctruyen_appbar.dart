@@ -9,11 +9,12 @@ class DocTruyenAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     // Bọc SafeArea để phần header tự động né tai thỏ/status bar
     return SafeArea(
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 16),
         height: 40,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.blue.withValues(alpha: 0.1),
           // Đổ bóng nhẹ nhàng mềm mại (Soft Shadow)
           boxShadow: [
             BoxShadow(
